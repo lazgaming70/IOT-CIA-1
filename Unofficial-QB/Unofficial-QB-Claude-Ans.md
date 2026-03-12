@@ -50,26 +50,26 @@ Example: In a smart home, the controller service receives sensor data and trigge
 
 Output elements (actuators) convert electrical signals from the controller into physical action:
 
-|Output Element|Example|Action|
+| Output Element | Example | Action |
 |---|---|---|
-|LED / Display|Smart signage|Visual output|
-|Motor (DC/Servo)|Robot arm|Mechanical movement|
-|Relay|Smart switch|On/Off control|
-|Speaker / Buzzer|Alarm system|Audio alert|
-|Solenoid Valve|Smart irrigation|Fluid control|
+| LED / Display | Smart signage | Visual output |
+| Motor (DC/Servo) | Robot arm | Mechanical movement |
+| Relay | Smart switch | On/Off control |
+| Speaker / Buzzer | Alarm system | Audio alert |
+| Solenoid Valve | Smart irrigation | Fluid control |
 
 ---
 
 #### 6. Compare IoT, IoE & M2M
 
-|Feature|IoT|IoE|M2M|
+| Feature | IoT | IoE | M2M |
 |---|---|---|---|
-|Full Form|Internet of Things|Internet of Everything|Machine to Machine|
-|Scope|Devices connected to internet|People, processes, data + devices|Two machines communicating directly|
-|Human Involvement|Minimal|High (includes people)|None|
-|Intelligence|Moderate|High (AI/analytics driven)|Low|
-|Network Required|Internet|Internet + enterprise network|Any network (cellular, LAN)|
-|Example|Smart bulb|Smart city ecosystem|Vending machine reporting stock|
+| Full Form | Internet of Things | Internet of Everything | Machine to Machine |
+| Scope | Devices connected to internet | People, processes, data + devices | Two machines communicating directly |
+| Human Involvement | Minimal | High (includes people) | None |
+| Intelligence | Moderate | High (AI/analytics driven) | Low |
+| Network Required | Internet | Internet + enterprise network | Any network (cellular, LAN) |
+| Example | Smart bulb | Smart city ecosystem | Vending machine reporting stock |
 
 ---
 
@@ -97,7 +97,6 @@ int val = analogRead(A0);
 ```
 
 Pin mode must be declared in `setup()`:
-
 ```ino
 pinMode(2, INPUT);        // Digital input
 pinMode(2, INPUT_PULLUP); // Digital input with internal pull-up
@@ -131,14 +130,12 @@ void loop() {
 #### 11. Brief SPI and I2C in physical design of IoT
 
 **SPI (Serial Peripheral Interface):**
-
 - 4-wire protocol: MOSI, MISO, SCK, SS
 - Full duplex, high speed (up to 10 Mbps)
 - Master-slave architecture, one master, multiple slaves
 - Used for: SD cards, TFT displays, RF modules
 
 **I2C (Inter-Integrated Circuit):**
-
 - 2-wire protocol: SDA (data), SCL (clock)
 - Supports multiple masters and slaves on same bus
 - Each device has a unique 7-bit address
@@ -181,7 +178,6 @@ void loop() {
 **Need for API:** API (Application Programming Interface) allows different software systems to communicate with each other in a standardized way. In IoT, APIs enable apps, cloud platforms, and devices to exchange data without knowing internal implementations.
 
 **Types:**
-
 1. **REST API** - uses HTTP methods (GET, POST, PUT, DELETE), most common in IoT
 2. **SOAP API** - XML-based, used in enterprise systems
 3. **GraphQL API** - client specifies exact data needed
@@ -215,7 +211,6 @@ void loop() {
 #### 16. Condition and looping statements in Arduino
 
 **Conditional Statements:**
-
 ```ino
 if (condition) { }
 else if (condition) { }
@@ -224,7 +219,6 @@ switch (variable) { case x: break; }
 ```
 
 **Looping Statements:**
-
 ```ino
 for (int i = 0; i < 10; i++) { }
 while (condition) { }
@@ -260,44 +254,39 @@ flowchart TD
 ##### Layer-wise Explanation
 
 **1. Physical Layer (Perception Layer)**
-
 - Comprises sensors (temperature, humidity, motion) and actuators (motors, relays).
 - Collects raw data from the physical environment.
 - Example: DHT11 sensor reading temperature and humidity.
 
 **2. Network / Communication Layer**
-
 - Responsible for transmitting sensor data to processing units.
 - Uses protocols: MQTT, CoAP, HTTP, Zigbee, Z-Wave, Wi-Fi, Bluetooth.
 - Includes gateways that bridge different network types.
 
 **3. Processing / Middleware Layer**
-
 - Filters, processes, and aggregates raw data.
 - Performs edge computing to reduce latency and cloud bandwidth.
 - Includes databases and message brokers (e.g., Mosquitto, RabbitMQ).
 
 **4. Application Layer**
-
 - Delivers processed information to end users.
 - Includes dashboards, mobile apps, alert systems.
 - Example: ThingSpeak dashboard showing sensor graphs.
 
 **5. Service / Business Layer**
-
 - Manages overall system: user authentication, device registration, APIs.
 - Enables third-party integration via REST APIs.
 - Provides business intelligence using the processed IoT data.
 
 ##### Data Flow Summary
 
-|Stage|Action|Example|
+| Stage | Action | Example |
 |---|---|---|
-|Sensing|Raw data collection|Temp = 37°C|
-|Transmission|Data sent via protocol|MQTT publish to broker|
-|Processing|Filtering and analysis|Detect fever condition|
-|Action|Trigger actuator/alert|Send SMS alert|
-|Feedback|Update application|Dashboard updated|
+| Sensing | Raw data collection | Temp = 37°C |
+| Transmission | Data sent via protocol | MQTT publish to broker |
+| Processing | Filtering and analysis | Detect fever condition |
+| Action | Trigger actuator/alert | Send SMS alert |
+| Feedback | Update application | Dashboard updated |
 
 ---
 
@@ -339,12 +328,12 @@ flowchart TD
 
 **Example:** Automatic night lamp - LDR sensor triggers LED via Arduino with no internet.
 
-|Feature|Detail|
+| Feature | Detail |
 |---|---|
-|Nodes|1|
-|Cloud|No|
-|Analysis|On-device|
-|Connectivity|None|
+| Nodes | 1 |
+| Cloud | No |
+| Analysis | On-device |
+| Connectivity | None |
 
 ---
 
@@ -358,12 +347,12 @@ flowchart TD
 
 **Example:** Smart energy meter - reads power consumption and pushes data to cloud dashboard. User views analytics via mobile app.
 
-|Feature|Detail|
+| Feature | Detail |
 |---|---|
-|Nodes|1|
-|Cloud|Yes|
-|Analysis|Cloud|
-|Connectivity|Wi-Fi / Ethernet|
+| Nodes | 1 |
+| Cloud | Yes |
+| Analysis | Cloud |
+| Connectivity | Wi-Fi / Ethernet |
 
 ---
 
@@ -377,12 +366,12 @@ flowchart TD
 
 **Example:** Smart home system - multiple sensors (temperature, door, motion) each pre-process data and send summaries to cloud.
 
-|Feature|Detail|
+| Feature | Detail |
 |---|---|
-|Nodes|Multiple|
-|Cloud|Yes|
-|Analysis|Local + Cloud|
-|Connectivity|Wi-Fi / Zigbee|
+| Nodes | Multiple |
+| Cloud | Yes |
+| Analysis | Local + Cloud |
+| Connectivity | Wi-Fi / Zigbee |
 
 ---
 
@@ -396,12 +385,12 @@ flowchart TD
 
 **Example:** Smart agriculture - soil sensors and weather stations send data to a local gateway, which aggregates and uploads to cloud. Cloud triggers irrigation valves.
 
-|Feature|Detail|
+| Feature | Detail |
 |---|---|
-|Nodes|Many + Coordinator|
-|Cloud|Yes|
-|Analysis|Coordinator + Cloud|
-|Connectivity|Zigbee / LoRa + Internet|
+| Nodes | Many + Coordinator |
+| Cloud | Yes |
+| Analysis | Coordinator + Cloud |
+| Connectivity | Zigbee / LoRa + Internet |
 
 ---
 
@@ -415,12 +404,12 @@ flowchart TD
 
 **Example:** Industrial IoT - factory machines send vibration and temperature data. Edge device detects anomalies in real time. Cloud runs predictive maintenance models and schedules repair.
 
-|Feature|Detail|
+| Feature | Detail |
 |---|---|
-|Nodes|Many|
-|Cloud|Yes (AI/ML)|
-|Analysis|Edge + Cloud|
-|Feedback|Real-time|
+| Nodes | Many |
+| Cloud | Yes (AI/ML) |
+| Analysis | Edge + Cloud |
+| Feedback | Real-time |
 
 ---
 
@@ -435,25 +424,25 @@ flowchart TD
 
 **Example:** Smart city infrastructure - traffic sensors, pollution monitors, CCTV cameras, water meters all feed into a central city management platform with big data analytics, enabling city-wide decision making.
 
-|Feature|Detail|
+| Feature | Detail |
 |---|---|
-|Scale|City / Enterprise level|
-|Cloud|Multi-cloud|
-|Analysis|Big Data + AI|
-|Integration|ERP, BI, Dashboards|
+| Scale | City / Enterprise level |
+| Cloud | Multi-cloud |
+| Analysis | Big Data + AI |
+| Integration | ERP, BI, Dashboards |
 
 ---
 
 ##### Summary Table
 
-|Level|Nodes|Cloud|Local Analysis|Example|
+| Level | Nodes | Cloud | Local Analysis | Example |
 |---|---|---|---|---|
-|1|1|No|Yes|Automatic night lamp|
-|2|1|Yes|No|Smart energy meter|
-|3|Multiple|Yes|Partial|Smart home|
-|4|Many + Coordinator|Yes|Coordinator|Smart agriculture|
-|5|Many + Edge|Yes (AI/ML)|Full edge analytics|Industrial IoT|
-|6|Enterprise scale|Multi-cloud|Big Data|Smart city|
+| 1 | 1 | No | Yes | Automatic night lamp |
+| 2 | 1 | Yes | No | Smart energy meter |
+| 3 | Multiple | Yes | Partial | Smart home |
+| 4 | Many + Coordinator | Yes | Coordinator | Smart agriculture |
+| 5 | Many + Edge | Yes (AI/ML) | Full edge analytics | Industrial IoT |
+| 6 | Enterprise scale | Multi-cloud | Big Data | Smart city |
 
 ---
 
@@ -480,15 +469,15 @@ flowchart TD
 
 Responsible for actual transmission of bits over a physical medium.
 
-|Protocol|Range|Power|Use Case|
+| Protocol | Range | Power | Use Case |
 |---|---|---|---|
-|Wi-Fi (IEEE 802.11)|~100m|High|Smart home, indoor IoT|
-|LoRa / LoRaWAN|~10km|Very Low|Smart agriculture, asset tracking|
-|NB-IoT|Wide area|Very Low|Smart metering, city IoT|
-|Bluetooth / BLE|~10m|Low|Wearables, healthcare|
-|Zigbee|~75m|Low|Home automation mesh networks|
-|Z-Wave|~30m|Low|Smart home devices|
-|4G / 5G|Wide area|Moderate|Connected vehicles, mobile IoT|
+| Wi-Fi (IEEE 802.11) | ~100m | High | Smart home, indoor IoT |
+| LoRa / LoRaWAN | ~10km | Very Low | Smart agriculture, asset tracking |
+| NB-IoT | Wide area | Very Low | Smart metering, city IoT |
+| Bluetooth / BLE | ~10m | Low | Wearables, healthcare |
+| Zigbee | ~75m | Low | Home automation mesh networks |
+| Z-Wave | ~30m | Low | Smart home devices |
+| 4G / 5G | Wide area | Moderate | Connected vehicles, mobile IoT |
 
 ---
 
@@ -496,12 +485,12 @@ Responsible for actual transmission of bits over a physical medium.
 
 Handle addressing and routing of data packets.
 
-|Protocol|Description|
+| Protocol | Description |
 |---|---|
-|IPv4|Traditional 32-bit addressing, limited IoT scalability|
-|IPv6|128-bit addressing - sufficient for billions of IoT devices|
-|6LoWPAN|IPv6 adaptation for low-power, low-bandwidth networks (IEEE 802.15.4)|
-|RPL|Routing protocol designed for low-power lossy networks|
+| IPv4 | Traditional 32-bit addressing, limited IoT scalability |
+| IPv6 | 128-bit addressing - sufficient for billions of IoT devices |
+| 6LoWPAN | IPv6 adaptation for low-power, low-bandwidth networks (IEEE 802.15.4) |
+| RPL | Routing protocol designed for low-power lossy networks |
 
 ---
 
@@ -509,12 +498,12 @@ Handle addressing and routing of data packets.
 
 Ensure reliable or fast delivery of data between source and destination.
 
-|Protocol|Type|Use in IoT|
+| Protocol | Type | Use in IoT |
 |---|---|---|
-|TCP|Reliable, connection-oriented|Used where data integrity matters (HTTP/MQTT over TCP)|
-|UDP|Unreliable, connectionless|Used for speed-critical IoT apps (CoAP runs over UDP)|
-|TLS|Security layer over TCP|Encrypts MQTT, HTTP communication|
-|DTLS|Security layer over UDP|Encrypts CoAP communication|
+| TCP | Reliable, connection-oriented | Used where data integrity matters (HTTP/MQTT over TCP) |
+| UDP | Unreliable, connectionless | Used for speed-critical IoT apps (CoAP runs over UDP) |
+| TLS | Security layer over TCP | Encrypts MQTT, HTTP communication |
+| DTLS | Security layer over UDP | Encrypts CoAP communication |
 
 ---
 
@@ -523,7 +512,6 @@ Ensure reliable or fast delivery of data between source and destination.
 Define the format and rules for data exchange between IoT devices and applications.
 
 **MQTT (Message Queuing Telemetry Transport)**
-
 - Publish-subscribe model via a broker.
 - Lightweight, designed for constrained devices.
 - Runs over TCP, port 1883 (8883 for TLS).
@@ -531,33 +519,28 @@ Define the format and rules for data exchange between IoT devices and applicatio
 - Use case: Remote sensor monitoring, smart home.
 
 **CoAP (Constrained Application Protocol)**
-
 - RESTful protocol designed for constrained devices.
 - Runs over UDP - very lightweight.
 - Supports GET, POST, PUT, DELETE like HTTP.
 - Use case: Smart energy meters, embedded sensors.
 
 **HTTP / HTTPS**
-
 - Standard web protocol.
 - Used when devices have enough resources.
 - Heavier than MQTT/CoAP.
 - Use case: Cloud APIs, REST-based IoT dashboards.
 
 **AMQP (Advanced Message Queuing Protocol)**
-
 - Enterprise-grade message queuing.
 - Reliable delivery with acknowledgments.
 - Use case: Industrial IoT, enterprise messaging.
 
 **WebSocket**
-
 - Full duplex communication over a single TCP connection.
 - Enables real-time bi-directional communication.
 - Use case: Real-time dashboards, live sensor feeds.
 
 **XMPP (Extensible Messaging and Presence Protocol)**
-
 - XML-based messaging protocol.
 - Good for device-to-device communication.
 - Use case: Smart grid, presence detection.
@@ -566,26 +549,26 @@ Define the format and rules for data exchange between IoT devices and applicatio
 
 ##### Protocol Comparison Table
 
-|Protocol|Transport|Model|Weight|Best For|
+| Protocol | Transport | Model | Weight | Best For |
 |---|---|---|---|---|
-|MQTT|TCP|Pub-Sub|Light|Remote monitoring|
-|CoAP|UDP|Request-Response|Very Light|Constrained devices|
-|HTTP|TCP|Request-Response|Heavy|Cloud APIs|
-|AMQP|TCP|Message Queue|Moderate|Enterprise IoT|
-|WebSocket|TCP|Bidirectional|Moderate|Real-time dashboards|
-|XMPP|TCP|Pub-Sub|Moderate|Device chat / presence|
+| MQTT | TCP | Pub-Sub | Light | Remote monitoring |
+| CoAP | UDP | Request-Response | Very Light | Constrained devices |
+| HTTP | TCP | Request-Response | Heavy | Cloud APIs |
+| AMQP | TCP | Message Queue | Moderate | Enterprise IoT |
+| WebSocket | TCP | Bidirectional | Moderate | Real-time dashboards |
+| XMPP | TCP | Pub-Sub | Moderate | Device chat / presence |
 
 ---
 
 ##### Protocol Selection by Application
 
-|Application|Recommended Protocol|Reason|
+| Application | Recommended Protocol | Reason |
 |---|---|---|
-|Smart agriculture sensor|MQTT + LoRa|Low power, long range|
-|Industrial monitoring|AMQP|Reliable delivery|
-|Wearable health device|BLE + MQTT|Low energy, lightweight|
-|Smart meter|CoAP + NB-IoT|Very constrained, wide area|
-|Real-time dashboard|WebSocket|Bidirectional live data|
+| Smart agriculture sensor | MQTT + LoRa | Low power, long range |
+| Industrial monitoring | AMQP | Reliable delivery |
+| Wearable health device | BLE + MQTT | Low energy, lightweight |
+| Smart meter | CoAP + NB-IoT | Very constrained, wide area |
+| Real-time dashboard | WebSocket | Bidirectional live data |
 
 ---
 
@@ -623,59 +606,47 @@ flowchart TD
 ##### Step-by-Step Description
 
 **Step 1 - Purpose & Requirements**
-
 - Define the problem the IoT system solves.
 - Identify users, environment, power constraints, and connectivity.
 - Example: "Monitor patient vitals remotely in a hospital."
 
 **Step 2 - Process Specification**
-
 - Model system behavior using flowcharts or state machines.
 - Define what happens when sensor data crosses a threshold.
 
 **Step 3 - Domain Model**
-
 - Identify entities: devices, users, data, gateways.
 - Define relationships between them.
 
 **Step 4 - Information Model**
-
 - Define data schemas: JSON, XML structure of sensor data.
 - Example: `{ "device_id": "001", "temp": 37.2, "timestamp": "..." }`
 
 **Step 5 - Service Specifications**
-
 - Define REST APIs or MQTT topics the system exposes.
 - Specify authentication, authorization, and data formats.
 
 **Step 6 - IoT Level Design**
-
 - Choose the appropriate IoT level (1-6) based on scale and requirements.
 
 **Step 7 - Functional View**
-
 - Design the logic: data collection, processing, alerting, storage.
 
 **Step 8 - Operational View**
-
 - Plan deployment, monitoring dashboards, update mechanisms.
 
 **Step 9 - Device & Component Selection**
-
 - Select sensors, microcontrollers, communication modules, cloud platform.
 
 **Step 10 - Application Development**
-
 - Write firmware for devices.
 - Develop backend APIs and frontend dashboards.
 
 **Step 11 - Prototype & Testing**
-
 - Build a prototype, test each component.
 - Validate end-to-end data flow and response time.
 
 **Step 12 - Deployment & Monitoring**
-
 - Deploy to production environment.
 - Set up monitoring, alerts, and over-the-air update mechanisms.
 
@@ -707,7 +678,6 @@ flowchart LR
 ```
 
 ##### 1. Digital I/O Interface (Pins 0-13)
-
 - 14 digital pins, each configurable as INPUT or OUTPUT.
 - Operates at 5V logic levels.
 - Maximum current per pin: 40mA.
@@ -719,7 +689,6 @@ digitalWrite(7, HIGH);
 ```
 
 ##### 2. Analog Input Interface (Pins A0-A5)
-
 - 6 analog input pins with 10-bit ADC resolution (0-1023).
 - Input voltage range: 0V to 5V.
 - Used for reading analog sensors: potentiometers, LDR, temperature sensors.
@@ -729,7 +698,6 @@ int val = analogRead(A0); // Returns 0 to 1023
 ```
 
 ##### 3. PWM Interface (Pins 3, 5, 6, 9, 10, 11)
-
 - 6 pins support Pulse Width Modulation (8-bit, 0-255).
 - Used for dimming LEDs, controlling servo/DC motor speed.
 
@@ -738,7 +706,6 @@ analogWrite(9, 128); // 50% duty cycle
 ```
 
 ##### 4. UART (Serial) Interface (Pins 0, 1)
-
 - Pin 0 = RX (Receive), Pin 1 = TX (Transmit).
 - Used for serial communication with PC (via USB) or other UART devices.
 - Also used for GSM modules, GPS modules.
@@ -750,39 +717,38 @@ Serial.println("Hello");
 
 ##### 5. SPI Interface (Pins 10, 11, 12, 13)
 
-|Pin|Function|
+| Pin | Function |
 |---|---|
-|10|SS (Slave Select)|
-|11|MOSI (Master Out Slave In)|
-|12|MISO (Master In Slave Out)|
-|13|SCK (Clock)|
+| 10 | SS (Slave Select) |
+| 11 | MOSI (Master Out Slave In) |
+| 12 | MISO (Master In Slave Out) |
+| 13 | SCK (Clock) |
 
 - High-speed synchronous interface.
 - Used with SD cards, TFT displays, RF modules (nRF24L01).
 
 ##### 6. I2C Interface (Pins A4, A5)
 
-|Pin|Function|
+| Pin | Function |
 |---|---|
-|A4|SDA (Serial Data)|
-|A5|SCL (Serial Clock)|
+| A4 | SDA (Serial Data) |
+| A5 | SCL (Serial Clock) |
 
 - 2-wire protocol supporting multiple devices with unique addresses.
 - Used with OLED displays, BMP180, MPU6050.
 
 ##### 7. ICSP Header
-
 - 6-pin header for In-Circuit Serial Programming.
 - Used to flash bootloader directly using an external programmer.
 
 ##### 8. Power Interface
 
-|Pin|Voltage|
+| Pin | Voltage |
 |---|---|
-|3.3V|3.3V output (up to 150mA)|
-|5V|5V output (regulated)|
-|GND|Ground reference|
-|VIN|External power input (7-12V)|
+| 3.3V | 3.3V output (up to 150mA) |
+| 5V | 5V output (regulated) |
+| GND | Ground reference |
+| VIN | External power input (7-12V) |
 
 ---
 
@@ -816,73 +782,60 @@ block-beta
 ##### Key Physical Components
 
 **1. ATmega328P Microcontroller**
-
 - 8-bit AVR RISC microcontroller, 16 MHz clock.
 - 32 KB Flash, 2 KB SRAM, 1 KB EEPROM.
 - Located at the center of the board.
 
 **2. ATmega16U2 (USB-to-Serial Converter)**
-
 - Converts USB communication to UART for programming.
 - Located near the USB-B connector.
 
 **3. USB Type-B Connector**
-
 - Used for programming the board and serial communication with PC.
 
 **4. DC Power Jack**
-
 - Accepts 7-12V DC external power supply.
 
 **5. Voltage Regulator**
-
 - Converts input voltage (VIN/DC Jack) to regulated 5V.
 
 **6. Crystal Oscillator (16 MHz)**
-
 - Provides clock signal to the MCU.
 
 **7. Digital I/O Pin Headers (0-13)**
-
 - 14 pins along the top edge of the board.
 
 **8. Analog Input Pin Headers (A0-A5)**
-
 - 6 pins along the bottom edge of the board.
 
 **9. Power Pin Headers**
-
 - 3.3V, 5V, GND, IOREF, RESET, VIN.
 
 **10. ICSP Headers**
-
 - Two 6-pin ICSP headers: one for ATmega328P, one for ATmega16U2.
 - Used for bootloader burning and firmware flashing.
 
 **11. Reset Button**
-
 - Restarts the currently running sketch.
 
 **12. TX/RX LEDs**
-
 - Blink during serial data transmission/reception.
 
 **13. Power and Pin 13 LEDs**
-
 - Power LED: indicates board is powered.
 - Pin 13 LED: built-in LED for testing.
 
-|Specification|Value|
+| Specification | Value |
 |---|---|
-|Microcontroller|ATmega328P|
-|Operating Voltage|5V|
-|Input Voltage|7-12V|
-|Digital I/O Pins|14 (6 PWM)|
-|Analog Input Pins|6|
-|Flash Memory|32 KB|
-|SRAM|2 KB|
-|EEPROM|1 KB|
-|Clock Speed|16 MHz|
+| Microcontroller | ATmega328P |
+| Operating Voltage | 5V |
+| Input Voltage | 7-12V |
+| Digital I/O Pins | 14 (6 PWM) |
+| Analog Input Pins | 6 |
+| Flash Memory | 32 KB |
+| SRAM | 2 KB |
+| EEPROM | 1 KB |
+| Clock Speed | 16 MHz |
 
 ---
 
@@ -905,21 +858,20 @@ flowchart TD
 
 **Types of Sensors:**
 
-|Type|Sensor|Measured Parameter|Example Application|
+| Type | Sensor | Measured Parameter | Example Application |
 |---|---|---|---|
-|Temperature|DHT11, LM35, DS18B20|Temperature / Humidity|HVAC, Weather station|
-|Light|LDR, BH1750|Light intensity|Smart lighting, Solar tracking|
-|Motion / Proximity|PIR, HC-SR04|Movement, Distance|Security systems, Smart parking|
-|Pressure|BMP180, BMP280|Atmospheric pressure, altitude|Drones, Weather monitoring|
-|Gas|MQ-2, MQ-135|Smoke, CO2, LPG|Gas leakage detection|
-|Accelerometer / Gyro|MPU6050|Acceleration, orientation|Wearables, drones|
-|Moisture|Soil moisture sensor|Water content|Smart irrigation|
-|Heart Rate / SpO2|MAX30100, MAX30102|Pulse, blood oxygen|Patient monitoring|
-|Sound|Sound sensor, Microphone|Audio levels|Smart home voice control|
-|Current / Voltage|INA219, ACS712|Electrical parameters|Smart energy monitoring|
+| Temperature | DHT11, LM35, DS18B20 | Temperature / Humidity | HVAC, Weather station |
+| Light | LDR, BH1750 | Light intensity | Smart lighting, Solar tracking |
+| Motion / Proximity | PIR, HC-SR04 | Movement, Distance | Security systems, Smart parking |
+| Pressure | BMP180, BMP280 | Atmospheric pressure, altitude | Drones, Weather monitoring |
+| Gas | MQ-2, MQ-135 | Smoke, CO2, LPG | Gas leakage detection |
+| Accelerometer / Gyro | MPU6050 | Acceleration, orientation | Wearables, drones |
+| Moisture | Soil moisture sensor | Water content | Smart irrigation |
+| Heart Rate / SpO2 | MAX30100, MAX30102 | Pulse, blood oxygen | Patient monitoring |
+| Sound | Sound sensor, Microphone | Audio levels | Smart home voice control |
+| Current / Voltage | INA219, ACS712 | Electrical parameters | Smart energy monitoring |
 
 **Characteristics of Sensors:**
-
 - **Sensitivity** - minimum change it can detect.
 - **Accuracy** - closeness to true value.
 - **Range** - minimum to maximum measurable value.
@@ -943,15 +895,15 @@ flowchart LR
 
 **Types of Actuators:**
 
-|Type|Example|Output Action|Application|
+| Type | Example | Output Action | Application |
 |---|---|---|---|
-|Electric Motor|DC Motor, Servo, Stepper|Rotational motion|Robots, conveyor belts, drones|
-|Relay|Electromagnetic relay|On/Off switching|Smart switches, industrial control|
-|LED / Display|RGB LED, LCD, OLED|Visual output|Indicators, dashboards|
-|Solenoid Valve|Solenoid valve|Fluid/gas flow control|Smart irrigation, HVAC|
-|Buzzer / Speaker|Piezo buzzer|Audio alert|Alarms, notifications|
-|Heater / Cooler|Peltier module|Temperature control|Incubators, cooling systems|
-|Linear Actuator|Pneumatic actuator|Linear motion|Automated doors, robotic arms|
+| Electric Motor | DC Motor, Servo, Stepper | Rotational motion | Robots, conveyor belts, drones |
+| Relay | Electromagnetic relay | On/Off switching | Smart switches, industrial control |
+| LED / Display | RGB LED, LCD, OLED | Visual output | Indicators, dashboards |
+| Solenoid Valve | Solenoid valve | Fluid/gas flow control | Smart irrigation, HVAC |
+| Buzzer / Speaker | Piezo buzzer | Audio alert | Alarms, notifications |
+| Heater / Cooler | Peltier module | Temperature control | Incubators, cooling systems |
+| Linear Actuator | Pneumatic actuator | Linear motion | Automated doors, robotic arms |
 
 ---
 
@@ -972,7 +924,6 @@ flowchart TD
 The sensor continuously feeds data to the microcontroller, which processes it and decides whether to trigger an actuator - locally or via cloud commands.
 
 **Example:** In a smart greenhouse:
-
 - Soil moisture sensor detects low moisture.
 - MCU sends data via Wi-Fi to cloud.
 - Cloud logic triggers a command.
@@ -1001,45 +952,40 @@ flowchart TD
 ```
 
 ##### 1. Things (End Devices)
-
 - Physical objects embedded with sensors and actuators.
 - Include embedded processor/microcontroller (Arduino, ESP32, Raspberry Pi).
 - Communicate wirelessly (Wi-Fi, Zigbee, BLE) or wired (Ethernet, RS485).
 
 ##### 2. Gateway
-
 - Bridges the communication between end devices and the internet.
 - Performs protocol translation (e.g., Zigbee to MQTT over TCP/IP).
 - May perform edge processing and data filtering.
 - Examples: Raspberry Pi gateway, commercial IoT hubs.
 
 ##### 3. Communication Network
-
 - Connects devices to the gateway and gateway to cloud.
 - Technologies: Wi-Fi, LoRa, NB-IoT, 4G/5G, Ethernet.
 - Protocols: MQTT, CoAP, HTTP.
 
 ##### 4. Cloud Platform
-
 - Stores and processes large volumes of IoT data.
 - Provides APIs for device management, data analytics, and dashboards.
 - Examples: AWS IoT Core, Azure IoT Hub, ThingSpeak, Google Cloud IoT.
 
 ##### 5. Application Layer
-
 - End-user interface: mobile app, web dashboard.
 - Enables monitoring, control, alerts, and data visualization.
 
 ##### Physical Design Elements Summary
 
-|Element|Hardware Example|Role|
+| Element | Hardware Example | Role |
 |---|---|---|
-|Sensor node|Arduino + DHT11 + ESP8266|Data collection|
-|Actuator node|Arduino + Relay module|Physical action|
-|Local gateway|Raspberry Pi|Aggregation + routing|
-|Communication|Wi-Fi Router|Network access|
-|Cloud|AWS IoT Core|Data storage + processing|
-|Application|React Web App|User interface|
+| Sensor node | Arduino + DHT11 + ESP8266 | Data collection |
+| Actuator node | Arduino + Relay module | Physical action |
+| Local gateway | Raspberry Pi | Aggregation + routing |
+| Communication | Wi-Fi Router | Network access |
+| Cloud | AWS IoT Core | Data storage + processing |
+| Application | React Web App | User interface |
 
 ---
 
@@ -1066,61 +1012,54 @@ flowchart TD
 ```
 
 ##### 1. Sensing / Perception
-
 - Interface with the physical world through sensors.
 - Converts physical parameters (temp, light, motion) to digital data.
 - Also includes actuators for output actions.
 - **Components:** Sensors (DHT11, PIR), ADC, signal conditioning circuits.
 
 ##### 2. Processing
-
 - Core computation unit of the IoT device.
 - Reads sensor data, applies logic, decides actions.
 - Can perform edge computing to reduce cloud dependency.
 - **Components:** Microcontrollers (Arduino, STM32), Single Board Computers (Raspberry Pi, ESP32).
 
 ##### 3. Communication
-
 - Transfers processed data to cloud/gateway and receives commands.
 - Involves multiple protocols depending on range and power.
 - **Components:** Wi-Fi module (ESP8266), LoRa module, Zigbee, Cellular (SIM800).
 - **Protocols:** MQTT, CoAP, HTTP, Zigbee.
 
 ##### 4. Storage
-
 - Stores sensor data for historical analysis and auditing.
 - Local storage: SD card, EEPROM, local database.
 - Cloud storage: AWS S3, Firebase, InfluxDB (time-series).
 
 ##### 5. Analysis
-
 - Derives insights from collected data.
 - Real-time analysis: anomaly detection, threshold alerts.
 - Batch analysis: trend analysis, predictive maintenance using ML.
 - **Tools:** Node-RED, AWS Lambda, Google Dataflow, Python ML models.
 
 ##### 6. Action / Control
-
 - Based on analysis, system triggers actuators or sends notifications.
 - Example: Alert SMS sent, relay switched ON, valve opened.
 
 ##### 7. User Interface
-
 - Allows users to monitor system status and issue control commands.
 - Dashboards: Grafana, ThingSpeak, custom React/Angular apps.
 - Mobile apps for remote monitoring.
 
 ##### Functional Parts Summary Table
 
-|Functional Part|Hardware|Software/Protocol|
+| Functional Part | Hardware | Software/Protocol |
 |---|---|---|
-|Sensing|Sensors, ADC|Device driver, firmware|
-|Processing|MCU, SBC|Arduino IDE, Python|
-|Communication|Wi-Fi, LoRa, Zigbee|MQTT, CoAP, HTTP|
-|Storage|SD card, Cloud DB|Firebase, InfluxDB|
-|Analysis|Cloud server, Edge|Python, Node-RED, ML|
-|Action|Actuators, Buzzers|Control logic|
-|User Interface|PC, Mobile|Web app, Mobile app|
+| Sensing | Sensors, ADC | Device driver, firmware |
+| Processing | MCU, SBC | Arduino IDE, Python |
+| Communication | Wi-Fi, LoRa, Zigbee | MQTT, CoAP, HTTP |
+| Storage | SD card, Cloud DB | Firebase, InfluxDB |
+| Analysis | Cloud server, Edge | Python, Node-RED, ML |
+| Action | Actuators, Buzzers | Control logic |
+| User Interface | PC, Mobile | Web app, Mobile app |
 
 ---
 
@@ -1156,33 +1095,32 @@ flowchart TD
 
 ##### Sensors Selected
 
-|Parameter|Sensor|Normal Range|Interface|
+| Parameter | Sensor | Normal Range | Interface |
 |---|---|---|---|
-|Heart Rate & SpO2|MAX30102|HR: 60-100 bpm, SpO2: >95%|I2C|
-|Body Temperature|MLX90614 (IR)|36.5 - 37.5°C|I2C|
-|Blood Pressure|BMP280 (indirect)|90/60 - 120/80 mmHg|I2C|
-|ECG|AD8232 ECG module|Normal sinus rhythm|Analog|
-|Respiratory Rate|MPU6050 (chest movement)|12-20 breaths/min|I2C|
-|Ambient Temperature|DHT22|Environment monitoring|Digital|
-|Patient Motion / Fall|ADXL345 Accelerometer|Detect falls|I2C|
+| Heart Rate & SpO2 | MAX30102 | HR: 60-100 bpm, SpO2: >95% | I2C |
+| Body Temperature | MLX90614 (IR) | 36.5 - 37.5°C | I2C |
+| Blood Pressure | BMP280 (indirect) | 90/60 - 120/80 mmHg | I2C |
+| ECG | AD8232 ECG module | Normal sinus rhythm | Analog |
+| Respiratory Rate | MPU6050 (chest movement) | 12-20 breaths/min | I2C |
+| Ambient Temperature | DHT22 | Environment monitoring | Digital |
+| Patient Motion / Fall | ADXL345 Accelerometer | Detect falls | I2C |
 
 ---
 
 ##### Actuators / Output Devices Selected
 
-|Output|Component|Purpose|
+| Output | Component | Purpose |
 |---|---|---|
-|Local alarm|Piezo buzzer|Alert if critical value detected locally|
-|Visual indicator|RGB LED|Green = normal, Red = critical|
-|Display|0.96" OLED|Show vitals on patient bedside monitor|
-|Relay|Relay module|Control IV drip rate or medical equipment|
+| Local alarm | Piezo buzzer | Alert if critical value detected locally |
+| Visual indicator | RGB LED | Green = normal, Red = critical |
+| Display | 0.96" OLED | Show vitals on patient bedside monitor |
+| Relay | Relay module | Control IV drip rate or medical equipment |
 
 ---
 
 ##### Hardware Architecture
 
 **Central Controller:** ESP32 (dual-core, built-in Wi-Fi + Bluetooth)
-
 - Reads all sensors over I2C and analog pins.
 - Processes data locally (edge detection of abnormal vitals).
 - Publishes data to MQTT broker over Wi-Fi.
@@ -1217,23 +1155,23 @@ flowchart LR
 
 ##### Alert Thresholds
 
-|Vital|Warning Threshold|Critical Threshold|
+| Vital | Warning Threshold | Critical Threshold |
 |---|---|---|
-|Heart Rate|<50 or >120 bpm|<40 or >150 bpm|
-|SpO2|<94%|<90%|
-|Temperature|>38°C|>39.5°C|
-|Respiratory Rate|<10 or >25 breaths/min|<8 or >30 breaths/min|
+| Heart Rate | <50 or >120 bpm | <40 or >150 bpm |
+| SpO2 | <94% | <90% |
+| Temperature | >38°C | >39.5°C |
+| Respiratory Rate | <10 or >25 breaths/min | <8 or >30 breaths/min |
 
 ---
 
 ##### Communication Stack
 
-|Layer|Technology|
+| Layer | Technology |
 |---|---|
-|Sensor to MCU|I2C, Analog|
-|MCU to Cloud|Wi-Fi + MQTT (TLS)|
-|Cloud to Doctor|HTTPS + WebSocket|
-|Alert Delivery|SMS (Twilio), Push Notification|
+| Sensor to MCU | I2C, Analog |
+| MCU to Cloud | Wi-Fi + MQTT (TLS) |
+| Cloud to Doctor | HTTPS + WebSocket |
+| Alert Delivery | SMS (Twilio), Push Notification |
 
 ---
 
@@ -1249,13 +1187,13 @@ flowchart LR
 
 ##### Advantages
 
-|Feature|Benefit|
+| Feature | Benefit |
 |---|---|
-|Continuous monitoring|Eliminates need for manual hourly checks|
-|Remote access|Doctor monitors from anywhere|
-|Automated alerts|Faster emergency response|
-|Data logging|Supports clinical decision making|
-|Scalable|Deploy across multiple wards easily|
+| Continuous monitoring | Eliminates need for manual hourly checks |
+| Remote access | Doctor monitors from anywhere |
+| Automated alerts | Faster emergency response |
+| Data logging | Supports clinical decision making |
+| Scalable | Deploy across multiple wards easily |
 
 ---
 
@@ -1305,7 +1243,6 @@ void loop() {
 ```
 
 **Explanation:**
-
 - `ledState` tracks whether the LED is currently ON or OFF.
 - The button press is detected on the **rising edge** (LOW to HIGH transition) to avoid toggling multiple times per press.
 - Debounce logic filters out electrical noise from the button contacts using a 50ms delay window.
