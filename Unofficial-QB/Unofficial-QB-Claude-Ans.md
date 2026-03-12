@@ -245,14 +245,14 @@ The **Logic Design of IoT** defines the functional architecture of an IoT system
 
 ```mermaid
 flowchart TD
-    A[Physical Layer
-    Sensors / Actuators] --> B[Network / Communication Layer
+    A[**Physical Layer**
+    Sensors / Actuators] --> B[**Network / Communication Layer**
     Wi-Fi, Zigbee, MQTT, CoAP]
-    B --> C[Processing / Middleware Layer
+    B --> C[**Processing / Middleware Layer**
     Data filtering, aggregation, edge computing]
-    C --> D[Application Layer
+    C --> D[**Application Layer**
     Dashboard, Analytics, Business Logic]
-    D --> E[Service / Business Layer
+    D --> E[**Service / Business Layer**
     API, User Management, Device Management]
     E --> A
 ```
@@ -307,21 +307,21 @@ IoT systems are categorized into **6 levels** based on complexity, number of nod
 
 ```mermaid
 flowchart TD
-    L1[Level 1
+    L1[**Level 1**
     Single Node
-    Local Analysis] --> L2[Level 2
+    Local Analysis] --> L2[**Level 2**
     Single Node
     Cloud Analysis]
-    L2 --> L3[Level 3
+    L2 --> L3[**Level 3**
     Multiple Nodes
     Gateway + Cloud]
-    L3 --> L4[Level 4
+    L3 --> L4[**Level 4**
     Coordinator + Cloud
     + Local Analysis]
-    L4 --> L5[Level 5
+    L4 --> L5[**Level 5**
     Coordinator + Cloud
     + End-to-End Analytics]
-    L5 --> L6[Level 6
+    L5 --> L6[**Level 6**
     Enterprise Level
     Big Data + Cloud]
 ```
@@ -463,14 +463,14 @@ IoT systems use a layered protocol architecture. Different protocols operate at 
 
 ```mermaid
 flowchart TD
-    A[Application Layer
+    A[**Application Layer**
     HTTP, CoAP, MQTT, AMQP, WebSocket, XMPP] --> B[Session / Transport Layer
     TCP, UDP, DTLS, TLS]
-    B --> C[Network Layer
+    B --> C[**Network Layer**
     IPv4, IPv6, 6LoWPAN, RPL]
-    C --> D[Data Link / MAC Layer
+    C --> D[**Data Link / MAC Layer**
     IEEE 802.15.4, Zigbee, Z-Wave, Bluetooth LE]
-    D --> E[Physical Layer
+    D --> E[**Physical Layer**
     Wi-Fi, LoRa, NB-IoT, 4G/5G, Ethernet]
 ```
 
@@ -595,28 +595,28 @@ IoT Design Methodology is a systematic approach to developing IoT systems from r
 
 ```mermaid
 flowchart TD
-    A[1․ Purpose & Requirements
-    Identify use case, stakeholders, constraints] --> B[2․ Process Specification
+    A[1․ **Purpose & Requirements**
+    Identify use case, stakeholders, constraints] --> B[2․ **Process Specification**
     Define data flow, control flow, system behavior]
-    B --> C[3․ Domain Model
+    B --> C[3․ **Domain Model**
     Identify IoT domain objects, relationships]
-    C --> D[4․ Information Model
+    C --> D[4․ **Information Model**
     Define data structures and formats]
-    D --> E[5․ Service Specifications
+    D --> E[5․ **Service Specifications**
     Define IoT services and APIs]
-    E --> F[6․ IoT Level Design
+    E --> F[6․ **IoT Level Design**
     Choose IoT level 1-6 based on system scale]
-    F --> G[7․ Functional View
+    F --> G[7․ **Functional View**
     Logic design, data processing pipelines]
-    G --> H[8․ Operational View
+    G --> H[8․ **Operational View**
     Deployment, monitoring, maintenance plan]
-    H --> I[9․ Device & Component Selection
+    H --> I[9․ **Device & Component Selection**
     Sensors, MCU, communication module, cloud]
-    I --> J[10․ Application Development
+    I --> J[10․ **Application Development**
     Firmware, backend, frontend, APIs]
-    J --> K[11․ Prototype & Testing
+    J --> K[11․ **Prototype & Testing**
     Build, test, validate, iterate]
-    K --> L[12․ Deployment & Monitoring
+    K --> L[12․ **Deployment & Monitoring**
     Deploy to production, continuous monitoring]
 ```
 
@@ -687,22 +687,22 @@ Arduino UNO provides multiple communication and I/O interfaces to connect with s
 
 ```mermaid
 flowchart LR
-    UNO[Arduino UNO
-    ATmega328P] --> DIO[Digital I/O
+    UNO[**Arduino UNO**
+    ATmega328P] --> DIO[**Digital I/O**
     Pins 0-13]
-    UNO --> AIO[Analog Input
+    UNO --> AIO[**Analog Input**
     A0-A5]
-    UNO --> PWM[PWM Output
+    UNO --> PWM[**PWM Output**
     Pins 3,5,6,9,10,11]
-    UNO --> UART[UART - Serial
+    UNO --> UART[**UART - Serial**
     Pins 0 RX, 1 TX]
-    UNO --> SPI_IF[SPI Interface
+    UNO --> SPI_IF[**SPI Interface**
     Pins 10 SS, 11 MOSI, 12 MISO, 13 SCK]
-    UNO --> I2C_IF[I2C Interface
+    UNO --> I2C_IF[**I2C Interface**
     A4 SDA, A5 SCL]
-    UNO --> ICSP[ICSP Header
+    UNO --> ICSP[**ICSP Header**
     In-Circuit Serial Programming]
-    UNO --> PWR[Power Interface
+    UNO --> PWR[**Power Interface**
     3.3V, 5V, GND, VIN]
 ```
 
@@ -985,14 +985,14 @@ The **physical design of an IoT system** describes the actual hardware component
 
 ```mermaid
 flowchart TD
-    THINGS[Things / Devices
-    Sensors, Actuators, Embedded Processors] --> GW[Local Gateway / Router
+    THINGS[**Things / Devices**
+    Sensors, Actuators, Embedded Processors] --> GW[**Local Gateway / Router**
     Data Aggregation, Protocol Translation]
-    GW --> INTERNET[Internet
+    GW --> INTERNET[**Internet**
     WAN Connection]
-    INTERNET --> CLOUD[Cloud Platform
+    INTERNET --> CLOUD[**Cloud Platform**
     AWS IoT, Azure IoT, Google Cloud IoT]
-    CLOUD --> APP[Applications
+    CLOUD --> APP[**Applications**
     Mobile App, Web Dashboard, Analytics]
     APP -->|Control Commands| GW
 ```
@@ -1046,18 +1046,18 @@ The **functional architecture of IoT** describes the logical components and how 
 
 ```mermaid
 flowchart TD
-    A[Sensing
-    Temperature, Humidity, Motion, etc.] --> B[Processing
+    A[**Sensing**
+    Temperature, Humidity, Motion, etc.] --> B[**Processing**
     Microcontroller / Edge Device]
-    B --> C[Communication
+    B --> C[**Communication**
     Wi-Fi, Zigbee, MQTT, HTTP]
-    C --> D[Storage
+    C --> D[**Storage**
     Cloud DB / Local DB]
-    D --> E[Analysis
+    D --> E[**Analysis**
     Data Analytics / AI / ML]
-    E --> F[Action
+    E --> F[**Action**
     Actuator / Alert / Dashboard]
-    F --> G[User Interface
+    F --> G[**User Interface**
     Mobile App / Web App]
     G -->|User Commands| B
 ```
