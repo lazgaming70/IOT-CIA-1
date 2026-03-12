@@ -595,28 +595,28 @@ IoT Design Methodology is a systematic approach to developing IoT systems from r
 
 ```mermaid
 flowchart TD
-    A[1. Purpose & Requirements
-    Identify use case, stakeholders, constraints] --> B[2. Process Specification
+    A[1․ Purpose & Requirements
+    Identify use case, stakeholders, constraints] --> B[2․ Process Specification
     Define data flow, control flow, system behavior]
-    B --> C[3. Domain Model
+    B --> C[3․ Domain Model
     Identify IoT domain objects, relationships]
-    C --> D[4. Information Model
+    C --> D[4․ Information Model
     Define data structures and formats]
-    D --> E[5. Service Specifications
+    D --> E[5․ Service Specifications
     Define IoT services and APIs]
-    E --> F[6. IoT Level Design
+    E --> F[6․ IoT Level Design
     Choose IoT level 1-6 based on system scale]
-    F --> G[7. Functional View
+    F --> G[7․ Functional View
     Logic design, data processing pipelines]
-    G --> H[8. Operational View
+    G --> H[8․ Operational View
     Deployment, monitoring, maintenance plan]
-    H --> I[9. Device & Component Selection
+    H --> I[9․ Device & Component Selection
     Sensors, MCU, communication module, cloud]
-    I --> J[10. Application Development
+    I --> J[10․ Application Development
     Firmware, backend, frontend, APIs]
-    J --> K[11. Prototype & Testing
+    J --> K[11․ Prototype & Testing
     Build, test, validate, iterate]
-    K --> L[12. Deployment & Monitoring
+    K --> L[12․ Deployment & Monitoring
     Deploy to production, continuous monitoring]
 ```
 
