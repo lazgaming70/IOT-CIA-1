@@ -453,7 +453,7 @@ IoT systems use a layered protocol architecture. Different protocols operate at 
 ```mermaid
 flowchart TD
     A[**Application Layer**
-    HTTP, CoAP, MQTT, AMQP, WebSocket, XMPP] --> B[Session / Transport Layer
+    HTTP, CoAP, MQTT, AMQP, WebSocket, XMPP] --> B[**Session / Transport Layer**
     TCP, UDP, DTLS, TLS]
     B --> C[**Network Layer**
     IPv4, IPv6, 6LoWPAN, RPL]
