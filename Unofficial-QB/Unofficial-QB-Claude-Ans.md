@@ -245,10 +245,15 @@ The **Logic Design of IoT** defines the functional architecture of an IoT system
 
 ```mermaid
 flowchart TD
-    A[Physical Layer\nSensors / Actuators] --> B[Network / Communication Layer\nWi-Fi, Zigbee, MQTT, CoAP]
-    B --> C[Processing / Middleware Layer\nData filtering, aggregation, edge computing]
-    C --> D[Application Layer\nDashboard, Analytics, Business Logic]
-    D --> E[Service / Business Layer\nAPI, User Management, Device Management]
+    A[Physical Layer
+    Sensors / Actuators] --> B[Network / Communication Layer
+    Wi-Fi, Zigbee, MQTT, CoAP]
+    B --> C[Processing / Middleware Layer
+    Data filtering, aggregation, edge computing]
+    C --> D[Application Layer
+    Dashboard, Analytics, Business Logic]
+    D --> E[Service / Business Layer
+    API, User Management, Device Management]
     E --> A
 ```
 
@@ -301,12 +306,24 @@ flowchart TD
 IoT systems are categorized into **6 levels** based on complexity, number of nodes, data flow, and the degree of cloud involvement.
 
 ```mermaid
-flowchart LR
-    L1[Level 1\nSingle Node\nLocal Analysis] --> L2[Level 2\nSingle Node\nCloud Analysis]
-    L2 --> L3[Level 3\nMultiple Nodes\nGateway + Cloud]
-    L3 --> L4[Level 4\nCoordinator + Cloud\n+ Local Analysis]
-    L4 --> L5[Level 5\nCoordinator + Cloud\n+ End-to-End Analytics]
-    L5 --> L6[Level 6\nEnterprise Level\nBig Data + Cloud]
+flowchart TD
+    L1[Level 1
+    Single Node
+    Local Analysis] --> L2[Level 2
+    Single Node
+    Cloud Analysis]
+    L2 --> L3[Level 3
+    Multiple Nodes
+    Gateway + Cloud]
+    L3 --> L4[Level 4
+    Coordinator + Cloud
+    + Local Analysis]
+    L4 --> L5[Level 5
+    Coordinator + Cloud
+    + End-to-End Analytics]
+    L5 --> L6[Level 6
+    Enterprise Level
+    Big Data + Cloud]
 ```
 
 ---
@@ -446,10 +463,15 @@ IoT systems use a layered protocol architecture. Different protocols operate at 
 
 ```mermaid
 flowchart TD
-    A[Application Layer\nHTTP, CoAP, MQTT, AMQP, WebSocket, XMPP] --> B[Session / Transport Layer\nTCP, UDP, DTLS, TLS]
-    B --> C[Network Layer\nIPv4, IPv6, 6LoWPAN, RPL]
-    C --> D[Data Link / MAC Layer\nIEEE 802.15.4, Zigbee, Z-Wave, Bluetooth LE]
-    D --> E[Physical Layer\nWi-Fi, LoRa, NB-IoT, 4G/5G, Ethernet]
+    A[Application Layer
+    HTTP, CoAP, MQTT, AMQP, WebSocket, XMPP] --> B[Session / Transport Layer
+    TCP, UDP, DTLS, TLS]
+    B --> C[Network Layer
+    IPv4, IPv6, 6LoWPAN, RPL]
+    C --> D[Data Link / MAC Layer
+    IEEE 802.15.4, Zigbee, Z-Wave, Bluetooth LE]
+    D --> E[Physical Layer
+    Wi-Fi, LoRa, NB-IoT, 4G/5G, Ethernet]
 ```
 
 ---
@@ -573,17 +595,29 @@ IoT Design Methodology is a systematic approach to developing IoT systems from r
 
 ```mermaid
 flowchart TD
-    A[1. Purpose & Requirements\nIdentify use case, stakeholders, constraints] --> B[2. Process Specification\nDefine data flow, control flow, system behavior]
-    B --> C[3. Domain Model\nIdentify IoT domain objects, relationships]
-    C --> D[4. Information Model\nDefine data structures and formats]
-    D --> E[5. Service Specifications\nDefine IoT services and APIs]
-    E --> F[6. IoT Level Design\nChoose IoT level 1-6 based on system scale]
-    F --> G[7. Functional View\nLogic design, data processing pipelines]
-    G --> H[8. Operational View\nDeployment, monitoring, maintenance plan]
-    H --> I[9. Device & Component Selection\nSensors, MCU, communication module, cloud]
-    I --> J[10. Application Development\nFirmware, backend, frontend, APIs]
-    J --> K[11. Prototype & Testing\nBuild, test, validate, iterate]
-    K --> L[12. Deployment & Monitoring\nDeploy to production, continuous monitoring]
+    A[1. Purpose & Requirements
+    Identify use case, stakeholders, constraints] --> B[2. Process Specification
+    Define data flow, control flow, system behavior]
+    B --> C[3. Domain Model
+    Identify IoT domain objects, relationships]
+    C --> D[4. Information Model
+    Define data structures and formats]
+    D --> E[5. Service Specifications
+    Define IoT services and APIs]
+    E --> F[6. IoT Level Design
+    Choose IoT level 1-6 based on system scale]
+    F --> G[7. Functional View
+    Logic design, data processing pipelines]
+    G --> H[8. Operational View
+    Deployment, monitoring, maintenance plan]
+    H --> I[9. Device & Component Selection
+    Sensors, MCU, communication module, cloud]
+    I --> J[10. Application Development
+    Firmware, backend, frontend, APIs]
+    J --> K[11. Prototype & Testing
+    Build, test, validate, iterate]
+    K --> L[12. Deployment & Monitoring
+    Deploy to production, continuous monitoring]
 ```
 
 ##### Step-by-Step Description
@@ -652,15 +686,24 @@ flowchart TD
 Arduino UNO provides multiple communication and I/O interfaces to connect with sensors, modules, and other devices.
 
 ```mermaid
-flowchart TD
-    UNO[Arduino UNO\nATmega328P] --> DIO[Digital I/O\nPins 0-13]
-    UNO --> AIO[Analog Input\nA0-A5]
-    UNO --> PWM[PWM Output\nPins 3,5,6,9,10,11]
-    UNO --> UART[UART - Serial\nPins 0 RX, 1 TX]
-    UNO --> SPI_IF[SPI Interface\nPins 10 SS, 11 MOSI, 12 MISO, 13 SCK]
-    UNO --> I2C_IF[I2C Interface\nA4 SDA, A5 SCL]
-    UNO --> ICSP[ICSP Header\nIn-Circuit Serial Programming]
-    UNO --> PWR[Power Interface\n3.3V, 5V, GND, VIN]
+flowchart LR
+    UNO[Arduino UNO
+    ATmega328P] --> DIO[Digital I/O
+    Pins 0-13]
+    UNO --> AIO[Analog Input
+    A0-A5]
+    UNO --> PWM[PWM Output
+    Pins 3,5,6,9,10,11]
+    UNO --> UART[UART - Serial
+    Pins 0 RX, 1 TX]
+    UNO --> SPI_IF[SPI Interface
+    Pins 10 SS, 11 MOSI, 12 MISO, 13 SCK]
+    UNO --> I2C_IF[I2C Interface
+    A4 SDA, A5 SCL]
+    UNO --> ICSP[ICSP Header
+    In-Circuit Serial Programming]
+    UNO --> PWR[Power Interface
+    3.3V, 5V, GND, VIN]
 ```
 
 ##### 1. Digital I/O Interface (Pins 0-13)
@@ -752,11 +795,22 @@ The physical design of Arduino UNO refers to the actual hardware components and 
 ```mermaid
 block-beta
     columns 4
-    MCU["ATmega328P\n(Main MCU)"]:2 USB_MCU["ATmega16U2\n(USB-Serial)"]:2
-    XTAL["16 MHz\nCrystal"]:1 RESET["Reset\nButton"]:1 POWER["Power\nRegulator"]:1 DCJACK["DC Power\nJack"]:1
-    DIG["Digital Pins\n0-13"]:2 ANA["Analog Pins\nA0-A5"]:2
-    ICSP1["ICSP Header\n(MCU)"]:2 ICSP2["ICSP Header\n(USB MCU)"]:2
-    PWR_PINS["Power Pins\n3.3V 5V GND VIN"]:4
+    MCU["ATmega328P
+    (Main MCU)"]:2 USB_MCU["ATmega16U2
+    (USB-Serial)"]:2
+    XTAL["16 MHz
+    Crystal"]:1 RESET["Reset
+    Button"]:1 POWER["Power
+    Regulator"]:1 DCJACK["DC Power
+    Jack"]:1
+    DIG["Digital Pins
+    0-13"]:2 ANA["Analog Pins
+    A0-A5"]:2
+    ICSP1["ICSP Header
+    (MCU)"]:2 ICSP2["ICSP Header
+    (USB MCU)"]:2
+    PWR_PINS["Power Pins
+    3.3V 5V GND VIN"]:4
 ```
 
 ##### Key Physical Components
@@ -840,9 +894,13 @@ A **sensor** is a device that detects physical or environmental parameters and c
 
 ```mermaid
 flowchart LR
-    PHY[Physical World\nTemperature, Light, Motion...] --> SENS[Sensor\nTransducer]
-    SENS --> SIG[Electrical Signal\nAnalog or Digital]
-    SIG --> MCU[Microcontroller\nProcessing]
+    PHY[Physical World
+    Temperature, Light, Motion...] --> SENS[Sensor
+    Transducer]
+    SENS --> SIG[Electrical Signal
+    Analog or Digital]
+    SIG --> MCU[Microcontroller
+    Processing]
 ```
 
 **Types of Sensors:**
@@ -900,7 +958,8 @@ flowchart LR
 flowchart LR
     ENV[Environment] --> SENS[Sensor]
     SENS --> MCU[Microcontroller]
-    MCU --> COMM[Communication\nModule]
+    MCU --> COMM[Communication
+    Module]
     COMM --> CLOUD[Cloud/Gateway]
     CLOUD --> COMM2[Communication]
     COMM2 --> ACT[Actuator]
@@ -926,10 +985,15 @@ The **physical design of an IoT system** describes the actual hardware component
 
 ```mermaid
 flowchart TD
-    THINGS[Things / Devices\nSensors, Actuators, Embedded Processors] --> GW[Local Gateway / Router\nData Aggregation, Protocol Translation]
-    GW --> INTERNET[Internet\nWAN Connection]
-    INTERNET --> CLOUD[Cloud Platform\nAWS IoT, Azure IoT, Google Cloud IoT]
-    CLOUD --> APP[Applications\nMobile App, Web Dashboard, Analytics]
+    THINGS[Things / Devices
+    Sensors, Actuators, Embedded Processors] --> GW[Local Gateway / Router
+    Data Aggregation, Protocol Translation]
+    GW --> INTERNET[Internet
+    WAN Connection]
+    INTERNET --> CLOUD[Cloud Platform
+    AWS IoT, Azure IoT, Google Cloud IoT]
+    CLOUD --> APP[Applications
+    Mobile App, Web Dashboard, Analytics]
     APP -->|Control Commands| GW
 ```
 
@@ -982,12 +1046,19 @@ The **functional architecture of IoT** describes the logical components and how 
 
 ```mermaid
 flowchart TD
-    A[Sensing\nTemperature, Humidity, Motion, etc.] --> B[Processing\nMicrocontroller / Edge Device]
-    B --> C[Communication\nWi-Fi, Zigbee, MQTT, HTTP]
-    C --> D[Storage\nCloud DB / Local DB]
-    D --> E[Analysis\nData Analytics / AI / ML]
-    E --> F[Action\nActuator / Alert / Dashboard]
-    F --> G[User Interface\nMobile App / Web App]
+    A[Sensing
+    Temperature, Humidity, Motion, etc.] --> B[Processing
+    Microcontroller / Edge Device]
+    B --> C[Communication
+    Wi-Fi, Zigbee, MQTT, HTTP]
+    C --> D[Storage
+    Cloud DB / Local DB]
+    D --> E[Analysis
+    Data Analytics / AI / ML]
+    E --> F[Action
+    Actuator / Alert / Dashboard]
+    F --> G[User Interface
+    Mobile App / Web App]
     G -->|User Commands| B
 ```
 
@@ -1058,14 +1129,23 @@ An IoT-based patient monitoring system continuously tracks vital parameters of a
 
 ```mermaid
 flowchart TD
-    PS[Patient\nwith Wearable Sensors] --> MCU[Microcontroller\nESP32 / Arduino]
-    MCU --> DISP[Local Display\nOLED - Patient Room]
-    MCU --> GW[Wi-Fi Gateway\nHospital Network]
-    GW --> CLOUD[Cloud Server\nAWS IoT / Firebase]
-    CLOUD --> DB[Database\nInfluxDB / MySQL]
-    CLOUD --> ALT[Alert Engine\nThreshold Detection]
-    ALT --> NOTIFY[Notifications\nSMS / Mobile App / Nurse Station]
-    DB --> DASH[Doctor Dashboard\nWeb / Mobile App]
+    PS[Patient
+    with Wearable Sensors] --> MCU[Microcontroller
+    ESP32 / Arduino]
+    MCU --> DISP[Local Display
+    OLED - Patient Room]
+    MCU --> GW[Wi-Fi Gateway
+    Hospital Network]
+    GW --> CLOUD[Cloud Server
+    AWS IoT / Firebase]
+    CLOUD --> DB[Database
+    InfluxDB / MySQL]
+    CLOUD --> ALT[Alert Engine
+    Threshold Detection]
+    ALT --> NOTIFY[Notifications
+    SMS / Mobile App / Nurse Station]
+    DB --> DASH[Doctor Dashboard
+    Web / Mobile App]
     DASH -->|Control / Acknowledge| CLOUD
 ```
 
