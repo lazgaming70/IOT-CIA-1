@@ -934,8 +934,11 @@ An **actuator** is a device that receives electrical control signals and convert
 
 ```mermaid
 flowchart LR
-    MCU[Microcontroller\nControl Signal] --> ACT[Actuator\nDriver Circuit]
-    ACT --> PHY[Physical Action\nMovement, Light, Sound...]
+    MCU[Microcontroller
+    Control Signal] --> ACT[Actuator
+    Driver Circuit]
+    ACT --> PHY[Physical Action
+    Movement, Light, Sound...]
 ```
 
 **Types of Actuators:**
