@@ -893,7 +893,7 @@ block-beta
 A **sensor** is a device that detects physical or environmental parameters and converts them into electrical signals that can be read by a microcontroller or computer.
 
 ```mermaid
-flowchart LR
+flowchart TD
     PHY[Physical World
     Temperature, Light, Motion...] --> SENS[Sensor
     Transducer]
@@ -958,7 +958,7 @@ flowchart LR
 ##### Sensor-Actuator Interaction in IoT
 
 ```mermaid
-flowchart LR
+flowchart TD
     ENV[Environment] --> SENS[Sensor]
     SENS --> MCU[Microcontroller]
     MCU --> COMM[Communication
