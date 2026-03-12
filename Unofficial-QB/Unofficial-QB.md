@@ -2,7 +2,7 @@
 
 1. Characteristics of IoT
 2. IoT systems are self-adapting and self-configuring. Justify your answer?
-3. Mention few real time examples of IoT systems (any 6 eg).
+3. Mention few real time examples of IoT systems (any 6 examples).
 4. Role of controller service in IoT system.
 5. Discuss various output elements in IoT.
 6. Compare IoT & IoE & M2M.
