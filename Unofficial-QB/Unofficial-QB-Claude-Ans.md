@@ -757,6 +757,7 @@ Serial.println("Hello");
 The physical design of Arduino UNO refers to the actual hardware components and their physical layout on the board.
 
 > **Note:** For a detailed annotated board image, refer to: [Arduino UNO Official Hardware Overview](https://store.arduino.cc/products/arduino-uno-rev3)
+> [`https://store.arduino.cc/products/arduino-uno-rev3`](https://store.arduino.cc/products/arduino-uno-rev3)
 
 ```mermaid
 block-beta
